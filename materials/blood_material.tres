@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://hh0oamw3k5ns"]
+
+[ext_resource type="Shader" uid="uid://cy7dds8sr2rg6" path="res://shaders/blood.gdshader" id="1_7462r"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7462r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8aqnv"]
+noise = SubResource("FastNoiseLite_7462r")
+
+[resource]
+shader = ExtResource("1_7462r")
+shader_parameter/blood_color = Color(0.8, 0, 0, 1)
+shader_parameter/background_color = Color(0, 0, 0, 1)
+shader_parameter/flow_velocity = 0.5
+shader_parameter/velocity_keep = 0.998
+shader_parameter/height_map = SubResource("NoiseTexture2D_8aqnv")
+shader_parameter/height_mult = 20.0
+shader_parameter/mask_min = 0.0
+shader_parameter/mask_max = 0.75
+shader_parameter/texel_size = 0.002

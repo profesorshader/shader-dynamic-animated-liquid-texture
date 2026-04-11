@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://efv7qqwaf1l5"]
+
+[ext_resource type="Shader" uid="uid://cvb5051bfo00f" path="res://shaders/splat.gdshader" id="1_x55px"]
+
+[resource]
+shader = ExtResource("1_x55px")
